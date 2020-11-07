@@ -1,2 +1,2 @@
 # Node-Express-Handlebars
-This application is a burger logger with MySQL, Node, Express, Handlebars, ORM and MVC design pattern.
+This application is a burger logger, which follows the MVC design pattern; use Node, Express and MySQL to query and route data, and Handlebars to generate HTML.
