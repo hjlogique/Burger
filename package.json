@@ -1,0 +1,19 @@
+{
+  "name": "node-express-handlebars",
+  "version": "1.0.0",
+  "description": "Eat Da Burger Menu is a burger menu with MySQL, Node, Express, Handlebars and ORM",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henry Logique",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
+  }
+}

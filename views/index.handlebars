@@ -1,38 +1,48 @@
-<h1>Cats!</h1>
+<!-- index.handlebars-->
 
-<h2>Cats that are not sleepy!</h2>
+<main class="container">
+    <div class="d-flex justify-content-center">
+        <img src="/assets/img/burger.png" alt="Burger image" id="burger-logo">
+    </div>
 
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <h1>Eat Da Burger Menu</h1><br>
+    <div class="row d-flex">
+        <div class="col">
+            <h3>Burgers List</h3>
+            <ul>
+                {{#each burger}}
+                {{#unless devoured}}
+                <li>
+                    <button class="burgerBtn btn btn-outline-warning" id="{{id}}">Devour It</button>
+                    {{burger_name}}
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Devoured Burgers</h3>
+            <ul>
+                {{#each burger}}
+                {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div><br>
+        <h4 id="submitBurgerTitle">Add A Burger</h4>
+        <form class="create-form">
 
-<h2>Cats that are sleepy!</h2>
+            <div class="form-inline">
+                <input type="text" class="form-control" id="burger" name="name" placeholder="Burger Name">
+           
 
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
-</form>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+             </div>
+        </form>
+    </div>
+</main>

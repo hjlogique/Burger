@@ -1,12 +1,15 @@
-### Schema
 
-CREATE DATABASE cat_db;
-USE cat_db;
+/* == schema.sql == */
 
-CREATE TABLE cats
-(
-	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255) NOT NULL,
-	sleepy BOOLEAN DEFAULT false,
+DROP DATABASE IF EXISTS burgers_db;
+
+CREATE DATABASE burgers_db;
+
+USE burgers_db;
+
+CREATE TABLE burgers (
+    id INT NOT NULL AUTO_INCREMENT,
+    burger_name VARCHAR(48) NOT NULL,
+    devoured BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
